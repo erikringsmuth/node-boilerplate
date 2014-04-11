@@ -1,5 +1,7 @@
 'use strict';
 
 module.exports = {
-  sort: Array.prototype.sort
+  sort: function(array) {
+    return Array.prototype.sort.call(array);
+  }
 };

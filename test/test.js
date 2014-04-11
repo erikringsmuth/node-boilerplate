@@ -9,9 +9,9 @@ describe('sort()', function() {
     var a = [3, 7, 2, 4];
 
     // act
-    main.sort(a);
+    var actual = main.sort(a);
 
     // assert
-    assert(a, [2, 3, 4, 7], 'The array should be sorted.');
+    assert.deepEqual(actual, [2, 3, 4, 7]);
   });
 });
