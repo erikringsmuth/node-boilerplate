@@ -1,0 +1,17 @@
+{
+  "name": "node-boilerplate",
+  "version": "0.0.0",
+  "description": "boilerplate code to get a node.js app started",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Erik Ringsmuth <erik.ringsmuth@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "~1.18.2"
+  }
+}
