@@ -3,7 +3,7 @@ var gulp    = require('gulp'),
     jshint  = require('gulp-jshint'),
     mocha   = require('gulp-mocha');
 
-var codeFiles = [
+var files = [
   '*.js',
   'test/**/*.js'
 ];
@@ -17,15 +17,15 @@ gulp.task('test', function () {
 
 gulp.task('lint', function() {
   gulp
-    .src(codeFiles)
+    .src(files)
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('watch', function () {
-  gulp.watch(codeFiles, function() {
-    gulp.run('test', 'lint');
+  gulp.watch(files, function() {
+    gulp.run('lint', 'test');
   });
 });
 
-gulp.task('default', ['test', 'lint', 'watch']);
+gulp.task('default', ['lint', 'test', 'watch']);
